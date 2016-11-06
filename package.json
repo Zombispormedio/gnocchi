@@ -1,0 +1,19 @@
+{
+  "name": "gnocchi",
+  "version": "1.0.0",
+  "description": "Gnocchi is a cooking-ready bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zombispormedio/gnocchi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zombispormedio/gnocchi/issues"
+  },
+  "homepage": "https://github.com/Zombispormedio/gnocchi#readme"
+}
