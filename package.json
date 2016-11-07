@@ -4,7 +4,7 @@
   "description": "Gnocchi is a cooking-ready bot",
   "main": "index.js",
   "scripts": {
-    "postinstall":"babel lib -d dist",
+    "postinstall": "babel lib -d dist",
     "start": "nodemon lib/index.js --exec babel-node",
     "build": "babel lib -d dist",
     "serve": "node dist/index.js",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Zombispormedio/gnocchi#readme",
   "devDependencies": {
     "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
     "mocha": "^3.1.2",
     "nodemon": "^1.11.0"
   },
