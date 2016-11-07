@@ -1,9 +1,11 @@
-import {assert} from 'chai'
+import {
+    assert
+} from 'chai'
 import {
     PORT
 } from '../lib/config.js'
 
-import {get
+import {get, post
 } from '../lib/request.js'
 import '../lib/index.js'
 
@@ -12,7 +14,7 @@ const URL = `http://localhost:${PORT}`;
 
 
 describe('Server Started', () => {
-    it("should return 200", () => {
+   it("should return 200", () => {
         return get(URL)
             .then((res) => {
                 assert.equal(200, res.status)
@@ -30,10 +32,20 @@ describe('Server Started', () => {
 
     it("should return message: 'Could not find path'", () => {
         let path = "hello"
-       return get(`${URL}/${path}`)
+        return get(`${URL}/${path}`)
             .then(res => {
                 assert.equal(false, res.body.success)
                 assert.equal(`Could not find path: /${path}`, res.body.err.message)
-            });
+            }).catch((e)=>console.log(e));
+    })
+
+
+    it("should return body", () => {
+        return post(`${URL}/telegram`, {
+            body:{msg:"hello"}
+        })
+        .then((res)=>{
+            assert.equal(false, res.body.success)
+        }).catch((e)=>console.log(e));
     })
 })
