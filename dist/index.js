@@ -29,6 +29,6 @@ var server = _http2.default.createServer(function (req, res) {
     });
 });
 
-server.listen(8080);
+server.listen(process.env.PORT || 5093);
 
 console.log('Server running');
