@@ -4,6 +4,7 @@
   "description": "Gnocchi is a cooking-ready bot",
   "main": "index.js",
   "scripts": {
+    "post-install":"babel lib -d dist",
     "start": "nodemon lib/index.js --exec babel-node",
     "build": "babel lib -d dist",
     "serve": "node dist/index.js",
